@@ -49,6 +49,10 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('*', (req, res) => {
+    res.send('My 404 page.')
+})
+
 app.listen(3000, () => { // optional argument
     console.log('Server is up on port 3000.')
 })
