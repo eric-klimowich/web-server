@@ -36,9 +36,9 @@ app.get('/about', (req, res) => {
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        helpText: 'This page will allow you to find the help you need.',
         title: 'Help',
-        name: 'Eric Klimowich'
+        name: 'Eric Klimowich',
+        helpText: 'This page will allow you to find the help you need.'
     })
 })
 
@@ -49,8 +49,20 @@ app.get('/weather', (req, res) => {
     })
 })
 
+app.get('/help/*', (req, res) => {
+    res.render('404', {
+        title: '404',
+        name: 'Eric Klimowich',
+        text404: 'Help article not found.'
+    })
+})
+
 app.get('*', (req, res) => {
-    res.send('My 404 page.')
+    res.render('404', {
+        title: '404',
+        name: 'Eric Klimowich',
+        text404: 'Page not found.'
+    })
 })
 
 app.listen(3000, () => { // optional argument
