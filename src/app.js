@@ -24,6 +24,12 @@ app.get('/about', (req, res) => {
     })
 })
 
+app.get('/help', (req, res) => {
+    res.render('help', {
+        message: 'This page will allow you to find the help you need.'
+    })
+})
+
 app.get('/weather', (req, res) => {
     res.send({
         address: 'New York',
