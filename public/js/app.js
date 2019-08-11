@@ -23,10 +23,13 @@ fetch('http://localhost:3000/weather?address=boston', ).then((response) => {
 })
 
 const weatherForm = document.querySelector('form')
+const search = document.querySelector('input')
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
     console.log('clicked')
+    const location = search.value
+    console.log(location)
 })
 
 console.log(weatherForm)
