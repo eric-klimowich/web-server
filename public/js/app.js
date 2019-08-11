@@ -23,12 +23,13 @@ console.log('Client side JavaScript file is loaded.')
 // })
 
 const weatherForm = document.querySelector('form')
+// console.log(weatherForm)
 const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
-messageOne.textContent = 'Message 1'
-messageTwo.textContent = 'Message 2'
+messageOne.textContent = 'Enter your location to see your weather forecast.'
+messageTwo.textContent = ''
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -48,5 +49,3 @@ weatherForm.addEventListener('submit', (event) => {
     })
 })
 })
-
-console.log(weatherForm)
